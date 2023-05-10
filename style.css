@@ -15,14 +15,24 @@ body {
   margin-top: 15px;
   height: 5%;
   margin-left: -10px;
+  padding: 5px;
+}
+.logo {
+  margin-left: 90px;
 }
 .mobile_links {
   display: none;
+  position: absolute;
+  top: 10%;
+  left: 40%;
 }
 .navbar a {
   text-decoration: none;
   color: gray;
   margin: 10px;
+}
+.links {
+  margin-left: 400px;
 }
 .navbar a:last-child {
   border: 1px solid black;
