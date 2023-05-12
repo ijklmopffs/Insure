@@ -36,9 +36,8 @@ body {
 }
 .navbar a:last-child {
   border: 1px solid black;
-  padding-left: 9px;
-  padding-right: 9px;
   color: black;
+  padding: 5px 12px 7px 12px;
 }
 .mobile {
   display: none;
