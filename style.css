@@ -6,40 +6,30 @@ body {
 .header {
   background-color: hsl(256, 26%, 20%);
   height: 90vh;
-  position: relative;
 }
 .navbar {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   background-color: white;
-  margin-top: 15px;
-  height: 5%;
-  margin-left: -10px;
-  padding: 5px;
-}
-.logo {
-  margin-left: 90px;
-}
-.mobile_links {
-  display: none;
-  position: absolute;
-  top: 10%;
-  left: 40%;
+  padding: 10px;
+  padding-block-end: 15px;
+  padding-block-start: 15px;
+  align-items: center;
 }
 .navbar a {
   text-decoration: none;
   color: gray;
   margin: 10px;
 }
-.links {
-  margin-left: 400px;
-}
 .navbar a:last-child {
   border: 1px solid black;
   color: black;
-  padding: 5px 12px 7px 12px;
+  padding: 1px 20px 1px 20px;
 }
 .mobile {
+  display: none;
+}
+.ham {
   display: none;
 }
 .hamburger {
@@ -49,11 +39,6 @@ body {
   display: flex;
   justify-content: space-around;
   margin-top: 50px;
-}
-.vl {
-  height: 10px;
-  color: gray;
-  width: 20px;
 }
 .humanize_text {
   width: 300px;
@@ -67,14 +52,14 @@ body {
 }
 .humanize button {
   border: 1px solid white;
-  padding: 10px 12px;
+  padding: 5px 20px 5px 20px;
   color: white;
   font-size: 16px;
   background-color: transparent;
   text-transform: uppercase;
 }
 .different {
-  margin-top: 300px;
+  margin-top: 200px;
   display: flex;
   flex-direction: column;
 }
@@ -146,28 +131,40 @@ body {
   margin: 10px;
   margin-right: 10px;
 }
-@media screen and (max-width: 375px) {
-  body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+.imgs img + img {
+  margin-inline-start: 8px;
+}
+@media screen and (max-width: 576px) {
+  .header {
+    height: 155vh;
     width: 100%;
+    position: relative;
   }
+  .ham {
+    display: flex;
+    align-items: center;
+  }
+
   .navbar {
     margin-top: 0;
     padding-top: 15px;
     margin-left: 0;
     padding-right: 20px;
   }
-  .hamburger {
-    display: block;
-    height: 30px;
-    margin-left: 60px;
-    margin-bottom: 20px;
+  .navbar a:last-child {
+    border: 1px solid white;
+    padding: 1px 20px 1px 20px;
+    color: white;
   }
-  .mobile_links {
-    position: absolute;
+  .navbar a {
+    color: white;
+  }
+  .links.active {
+    display: flex;
+  }
+  .links {
     display: none;
+    position: absolute;
     width: 60%;
     left: 11%;
     top: 6%;
@@ -177,21 +174,19 @@ body {
     align-self: flex-end;
     padding: 0 24px;
     margin-top: 10px;
+    text-transform: uppercase;
   }
-  .navbar a:last-child {
-    padding: 0;
+  .hamburger {
+    display: block;
+    height: 30px;
+    margin-left: 60px;
+    margin-bottom: 20px;
   }
+
   .desktop {
     display: none;
   }
-  .header {
-    height: 180vh;
-    width: 109%;
-    position: relative;
-  }
-  .links {
-    display: none;
-  }
+
   .humanize {
     width: 100%;
     flex-direction: column-reverse;
@@ -206,26 +201,45 @@ body {
   }
   .different {
     flex-direction: column;
-    width: 96%;
+    width: 100%;
     align-items: center;
   }
   .different_container {
     flex-direction: column;
     text-align: center;
-    margin-left: -43px;
   }
   .different h1 {
-    margin: 0 auto;
-    margin-left: 48px;
     width: 100%;
     margin-bottom: 50px;
+    text-align: center;
+    margin-left: 0;
+  }
+  .different_box {
+    margin-inline-start: 0;
+    width: 310px;
   }
   .more {
-    width: 109%;
-    height: 210px;
+    width: 100%;
+    height: 260px;
   }
   .text {
     flex-direction: column;
+  }
+  .text h2 {
+    width: 274px;
+    text-align: center;
+    margin-inline-start: 0;
+  }
+  .text button {
+    margin-inline-end: 0;
+  }
+  .foot {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .foot p {
+    margin: 2px;
   }
   .images {
     flex-direction: column;
@@ -242,6 +256,10 @@ body {
     align-items: center;
   }
   .footer {
-    width: 109%;
+    width: 100%;
+  }
+  .humanize_text {
+    text-align: center;
+    width: 310px;
   }
 }
